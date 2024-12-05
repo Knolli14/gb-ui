@@ -8,7 +8,7 @@ import json
 
 
 
-#TODO: remove error screen at the start when no game is chosen
+#TODO: add button that shows context after answer
 
 # FastAPI endpoint URL
 api_url = "https://finalinprod2-553939255999.europe-west1.run.app/prompt"
@@ -105,13 +105,6 @@ if filtered_games:
             else:
                 st.write("Please enter a question.")
 
-    # show most relevent chunk
-    def show_context():
-        st.write("TEST")
-
-    while answered:
-        if st.button("Context", on_click=show_context):
-            pass
 
 
 else:
