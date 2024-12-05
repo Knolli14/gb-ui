@@ -77,7 +77,7 @@ if filtered_games:
                             # TODO: in case we deploy llama3.2
                             # answer = response_data.get("answer", "No answer provided.")[1]["content"]
 
-                            # dist = response_data.get("distance")
+                            dist = response_data.get("distance")
 
 
                             if min(dist) <= 0.85:
