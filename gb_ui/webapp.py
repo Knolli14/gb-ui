@@ -38,10 +38,14 @@ filtered_games = None
 # Filter the game dynamically
 if game_input:
     filtered_games = [game for game in games_list if game_input.lower() in game.lower()]
+else:
+    filtered_games = st.selectbox("Select the game from the suggestions:",game_input)
 
 #Show filtered games in a dropdown
 if filtered_games:
-    selected_game = st.selectbox("Select the game from the suggestions:", filtered_games)
+    selected_games = st.selectbox("Select the game from the suggestions:", filtered_games)
+
+
 
 # Create a form to handle submission with the Enter key
     with st.form(key="query_form"):
