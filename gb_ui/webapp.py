@@ -71,15 +71,16 @@ if filtered_games:
                             # Parse the JSON response
                             response_data = response.json()
                             # Display the answer from FastAPI
-                            answer = response_data.get("answer", "No answer provided.")[0]["generated_text"]
-                            dist = response_data.get("distance")
+                            #answer = response_data.get("answer", "No answer provided.")[0]["generated_text"]
+                            #dist = response_data.get("distance")
+                            answer = response_data
 
-                            if min(dist) <= 0.8:
-                                st.balloons()
-                                st.write(answer)
+                            #if min(dist) <= 0.8:
+                            st.balloons()
+                            st.write(answer)
 
-                            else:
-                                st.write("Im dumb")
+                            # else:
+                            #     st.write("Im dumb")
 
                         else:
                             st.write("Error: Could not retrieve answer from the API.")
