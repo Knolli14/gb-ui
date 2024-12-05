@@ -43,7 +43,7 @@ else:
 
 #Show filtered games in a dropdown
 if filtered_games:
-    selected_games = st.selectbox("Select the game from the suggestions:", filtered_games)
+    selected_game = st.selectbox("Select the game from the suggestions:", filtered_games)
 
 
 
