@@ -25,10 +25,10 @@ st.title("Welcome to 7 Wonders - the place where you find all your answers")
 st.snow()
 
 #List of games
-# with open("games.json", "r") as f:
-#     games_list = json.loads(f.read())
+with open("./games.json", "r") as f:
+    games_list = json.loads(f.read())
 
-games_list = ["kingdomino", "battle sheep", "dr eureka", "codenames", "when i dream", "unlock escape adventures", "terraforming mars", "seven wonders duel", "exploding kittens", "this war of mine the board game", "queendomino", "7 wonders", "catan", "robinson crusoe adventures on the cursed islan"]
+#games_list = ["kingdomino", "battle sheep", "dr eureka", "codenames", "when i dream", "unlock escape adventures", "terraforming mars", "seven wonders duel", "exploding kittens", "this war of mine the board game", "queendomino", "7 wonders", "catan", "robinson crusoe adventures on the cursed islan"]
 
 
 # Dynamic game suggestion input
@@ -71,16 +71,23 @@ if filtered_games:
                             # Parse the JSON response
                             response_data = response.json()
                             # Display the answer from FastAPI
-                            #answer = response_data.get("answer", "No answer provided.")[0]["generated_text"]
-                            #dist = response_data.get("distance")
-                            answer = response_data
+                            answer = response_data.get("answer", "No answer provided.")[0]["generated_text"]
 
-                            #if min(dist) <= 0.8:
-                            st.balloons()
-                            st.write(answer)
 
-                            # else:
-                            #     st.write("Im dumb")
+                            # TODO: in case we deploy llama3.2
+                            answer = response_data.get("answer", "No answer provided.")[1]["content"]
+
+                            dist = response_data.get("distance")
+
+
+                            if min(dist) <= 0.85:
+                                st.balloons()
+                                st.write(answer)
+                            elif min(dist) >= 0.75:
+                                st.write("I'm not quite sure, but let me try")
+                                st.write(answer)
+                            else:
+                                 st.write("I'm dumb")
 
                         else:
                             st.write("Error: Could not retrieve answer from the API.")
