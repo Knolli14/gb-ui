@@ -89,6 +89,10 @@ if filtered_games:
                             else:
                                  st.write("I'm dumb")
 
+                            # show most relevent chunk
+                            if st.button("Show most relevant context"):
+                                st.write("TEST")
+
                         else:
                             st.write("Error: Could not retrieve answer from the API.")
                     except Exception as e:
