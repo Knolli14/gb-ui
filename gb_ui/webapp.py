@@ -56,6 +56,9 @@ if filtered_games:
         # Submit button
         submit_button = st.form_submit_button("Enter")
 
+        # swtich answered status
+        answered = False
+
         if submit_button:
             if user_input:
                 # Send request to FastAPI
@@ -89,6 +92,8 @@ if filtered_games:
                             else:
                                  st.write("I'm dumb")
 
+                            # switching answered status
+                            answered = True
 
 
                         else:
@@ -99,8 +104,10 @@ if filtered_games:
                 st.write("Please enter a question.")
 
     # show most relevent chunk
-    if st.button("Show most relevant context"):
-        st.write("TEST")
+    answered = False
+    while answered:
+        if st.button("Show most relevant context"):
+            st.write("TEST")
 
 else:
     st.warning("No matching game found. Please try typing a different name.")
