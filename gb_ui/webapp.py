@@ -11,7 +11,7 @@ import json
 #TODO: remove error screen at the start when no game is chosen
 
 # FastAPI endpoint URL
-api_url = "https://finalinprod2-553939255999.europe-west1.run.app/"
+api_url = "https://finalinprod2-553939255999.europe-west1.run.app"
 #api_url = "http://0.0.0.0:8000"
 #api_url = "http://127.0.0.1:8000"
 #api_url = "https://runinprod-553939255999.europe-west1.run.app"  #
