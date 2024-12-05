@@ -12,8 +12,8 @@ import json
 
 # FastAPI endpoint URL
 #api_url = "http://0.0.0.0:8000"
-api_url = "http://127.0.0.1:8000"
-#api_url = "https://runinprod-553939255999.europe-west1.run.app"  # Ensure the FastAPI app is running
+#api_url = "http://127.0.0.1:8000"
+api_url = "https://runinprod-553939255999.europe-west1.run.app"  # Ensure the FastAPI app is running
 
 
 # Title of the Streamlit app
@@ -26,7 +26,7 @@ st.snow()
 # with open("games.json", "r") as f:
 #     games_list = json.loads(f.read())
 
-games_list = ["kingdomino", "battle sheep", "dr eureka", "codenames", "when i dream", "unlock escape adventures", "terraforming mars", "seven wonders duel", "exploding kittens", "this war of mine the board game", "queendomino", "7 wonders", "catan"]
+games_list = ["kingdomino", "battle sheep", "dr eureka", "codenames", "when i dream", "unlock escape adventures", "terraforming mars", "seven wonders duel", "exploding kittens", "this war of mine the board game", "queendomino", "7 wonders", "catan", "robinson crusoe adventures on the cursed islan"]
 
 
 # Dynamic game suggestion input
