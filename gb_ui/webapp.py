@@ -12,13 +12,14 @@ games_list = ["cottage garden", "olympos 2", "zone a le secret de tchernobyl", "
 #TODO: remove error screen at the start when no game is chosen
 
 # FastAPI endpoint URL
-api_url = "https://runinprod-553939255999.europe-west1.run.app"  # Ensure the FastAPI app is running
+api_url = "http://127.0.0.1:8000  "
+#api_url = "https://runinprod-553939255999.europe-west1.run.app"  # Ensure the FastAPI app is running
 
 
 # Title of the Streamlit app
 st.image("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3VwaHoyNTU1eGgxeHBjOW9qaG40ZG5tbjJ0cmkxcW1jMmVjcDhybSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3orieMvIzyjwayeK1q/giphy.gif", use_container_width=True)
 st.title("🎲🎲🎲 Do you need help with a game 🎲🎲🎲?")
-st.title("Welcome 7 Wonders - the place where you find all your answers")
+st.title("Welcome to 7 Wonders - the place where you find all your answers")
 st.snow()
 
 # List of games
