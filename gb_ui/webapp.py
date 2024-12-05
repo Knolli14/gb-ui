@@ -89,9 +89,7 @@ if filtered_games:
                             else:
                                  st.write("I'm dumb")
 
-                            # show most relevent chunk
-                            if st.button("Show most relevant context"):
-                                st.write("TEST")
+
 
                         else:
                             st.write("Error: Could not retrieve answer from the API.")
@@ -99,6 +97,10 @@ if filtered_games:
                             st.error(f"An error occurred: {e}")
             else:
                 st.write("Please enter a question.")
+
+    # show most relevent chunk
+    if st.button("Show most relevant context"):
+        st.write("TEST")
 
 else:
     st.warning("No matching game found. Please try typing a different name.")
