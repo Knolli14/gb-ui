@@ -107,9 +107,18 @@ if filtered_games:
 
     # show most relevent chunk
 
-    while answered:
-        if st.button("Show most relevant context"):
-            st.write("TEST")
+    # Funktion zum Umschalten des Zustands
+    def toggle_visibility():
+        st.session_state["button_visible"] = 1 - st.session_state["button_visible"]
+
+    # Umschaltknopf, der den Zustand ändert
+    if st.button("Sichtbarkeit wechseln"):
+        toggle_visibility()
+
+    # Bedingung: Button nur im Zustand 1 anzeigen
+    if st.session_state["button_visible"] == 1:
+        if st.button("Ich bin sichtbar!"):
+            st.write("Button wurde gedrückt.")
 
 else:
     st.warning("No matching game found. Please try typing a different name.")
