@@ -36,6 +36,8 @@ st.text("Start typing the game you are playing:")
 game_input = st.text_input("Game Name")
 
 filtered_games = None
+answered = False
+
 # Filter the game dynamically
 if game_input:
     filtered_games = [game for game in games_list if game_input.lower() in game.lower()]
@@ -104,7 +106,7 @@ if filtered_games:
                 st.write("Please enter a question.")
 
     # show most relevent chunk
-    answered = False
+
     while answered:
         if st.button("Show most relevant context"):
             st.write("TEST")
