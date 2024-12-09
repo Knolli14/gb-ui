@@ -64,7 +64,8 @@ if filtered_games:
                         response = requests.get(
                             api_url,
                             params={"query": user_input, "game": selected_game},
-                            timeout=60
+                            timeout=60,
+
                             )
 
                         if response.status_code == 200:
@@ -96,7 +97,8 @@ if filtered_games:
                         else:
                             st.write("Error: Could not retrieve answer from the API.")
                     except Exception as e:
-                            st.error(f"An error occurred: {e}")
+                            st.write("I couldnt get an answer...")
+                            #st.error(f"An error occurred: {e}")
             else:
                 st.write("Please enter a question.")
 
